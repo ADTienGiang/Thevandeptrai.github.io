@@ -1,0 +1,493 @@
+*{
+    padding: 0px;
+    /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+    margin: 0px;
+    /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+    box-sizing: border-box;
+    /* để các phần tử có kích thước chính xác khi bạn khai báo */
+}
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    background-color: rgb(255, 247, 249); 
+    text-rendering: optimizeLegibility;
+}
+/* ----------------- */
+header{
+    background-image: linear-gradient(45deg, rgba(38,80,119,1),25%, rgba(45,95,93,0.4)), url("./resources/img/anhdaidien.jpg"); 
+    /* ảnh sử dụng làm backgroud */
+    background-size: cover;
+    /* full kích cở màn hình */
+    background-position: center;
+    /* căn giữa màn hình */
+    height: 100vh;
+    background-attachment: fixed;
+    /* giữ nguyên tấm ảnh không bị trôi theo */
+}
+
+.logo{
+    width: 100px;
+    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */
+    float: left;
+    /* logo nằm bên trái */
+}
+.main-nav{
+    float:left;  
+    /* nằm bên trái */
+    list-style: none;
+    /* Không hiển thị image list, đây là dạng mặc định. */
+    margin-left: 50px;
+    /* Canh lề bên trái cho thành phần, đơn vị có thể là px, em, %, ... */
+    margin-top: 55px;
+    /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+.main-nav li{
+    display: inline-block   ;
+    /* Thành phần sẽ hiển thị như một khối, nhưng là một khối nội tuyến. */
+    margin-left: 30px;
+      /* Canh lề bên trái cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+.main-nav li a {
+    text-decoration: none;
+    /* Định dạng văn bản bình thường, đây là dạng mặc định. */
+    color: rgb(196, 161, 47);
+    /* màu */
+    font-weight: 700;
+    /* Xác định font đậm hay không. */
+    transition: border-bottom 0.075s;
+    /* .... */
+
+    padding: 3px 0;
+       /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid rgb(192, 221, 31) ;
+    /* Xác định đường viền bên dưới */
+}
+.clearfix::after{
+    content: " ";
+    /* Nội dung trong dấu ngoặc sẽ được thêm vào thành phần. */
+    display: table;
+    /* Thành phần sẽ đối xử như một table, ngắt dòng trước và sau thành phần. */
+    clear: both;
+    /* Bên trái và phải của thành phần không được float. */
+
+}
+.row{
+    max-width: 1140px;
+    /* Chiều cao tính từ mép bên trái ngoài cùng của thành phần, đơn vị có thể là px, em, %, ... */
+    margin: 0 auto;
+    /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+}
+.heading-main-box{
+    position: absolute;
+    /* Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt. */
+    top: 50%;
+    /* 	Khoảng cách tính từ mép trên ngoài cùng của thành phần bao ngoài, đơn vị có thể là px, em, %, ... */
+    left: 50%;
+    /* Khoảng cách tính từ mép trái ngoài cùng của thành phần bao ngoài, đơn vị có thể là px, em, %, ... */
+    transform: translate(-45%,-55%);
+    /* Xác định một dịch chuyển 2D. */
+  width: 1140px;
+  
+    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */
+
+}
+h1{
+    text-transform: uppercase;
+    /* Tất cả chữ trong văn bản thành chữ hoa. */
+    font-size: 300%;
+    /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+    font-weight: 400;
+    /* ác định độ đậm của chữ cái xuất hiện trong phần tử. */
+    letter-spacing: 1px;
+    /* Tăng hoặc giảm khoảng cách giữa các ký tự. */
+    word-spacing: 5px;
+    /* Tăng hoặc giảm khoảng cách giữa các từ trong đoạn văn bản, có thể sử dụng giá trị âm. */
+    color: rgb(226, 224, 111);
+    line-height: 135%;
+    /* Tăng hoặc giảm khoảng cách giữa các dòng, đơn vị có thể là px, em, %, ... */
+    margin-bottom: 50px;
+        /* Canh lề bên dưới cho thành phần, đơn vị có thể là px, em, %, ... */
+  }
+.btn{
+    text-decoration: none;
+        /* Định dạng văn bản bình thường, đây là dạng mặc định. */
+    color : rgb(247, 248, 246);
+    background-color: #e67e22;
+    /* iết lập màu cho toàn bộ nền của phần tử, bao gồm cả phần Background Padding và Background Border. */
+    padding: 15px 30px;
+    /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+    border-radius: 20px;
+    /* Cả 4 góc đều được uốn cong. */
+    margin: 0 5px   ;
+    /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+    width: 190px;
+    /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+}
+.btn:hover,
+.btn:active{
+  background-color: #d35400;
+   /* iết lập màu cho toàn bộ nền của phần tử, bao gồm cả phần Background Padding và Background Border. */
+}
+ h2{
+     text-transform: uppercase;
+     /* Tất cả chữ trong văn bản thành chữ hoa. */
+     letter-spacing: 1px;
+       /* Tăng hoặc giảm khoảng cách giữa các ký tự. */
+     color: #d35400;
+     font-size: 180%;
+      /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+     font-weight: 700;
+      /* xác định độ đậm của chữ cái xuất hiện trong phần tử. */
+     text-align: center;
+   /* Sắp nội dung theo chiều ngang nằm giữa. */
+ }
+ h2:after{
+    content: " ";
+        /* Nội dung trong dấu ngoặc sẽ được thêm vào thành phần. */
+    display: block;
+    /* Thành phần hiển thị như một khối, khi sử dụng giá trị block thành phần sẽ đứng một hàng độc lập so với thành phần trước và sau nó. */
+    width: 150px;
+      /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+    height: 3px;
+    /* Định rõ đơn vị cho chiều cao. */
+    background-color: rgba(230, 126, 34,0.5);
+    margin: 0 auto;
+    /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+    margin-top: 5px;
+    /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+  }
+  
+  .p-long{
+    text-align: center;
+    /*  /* Sắp nội dung theo chiều ngang nằm giữa.  */
+    color: #265077;
+    font-size: 22px;
+     /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+    margin-top: 40px;
+     /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+    margin-bottom: 40px;
+        /* Canh lề bên dưới cho thành phần, đơn vị có thể là px, em, %, ... */
+    width: 70%;
+     /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+    margin-left: 1%;
+     /* Canh lề bên trái cho thành phần, đơn vị có thể là px, em, %, ... */
+    line-height: 140%;
+    /* Tăng hoặc giảm khoảng cách giữa các dòng, đơn vị có thể là px, em, %, ... */
+  }
+  section{
+      padding: 50px;
+         /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+}
+  .about-picture{
+    position: relative;
+     /* Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt. */
+    margin-top: 50px;
+     /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+  }
+  .about-picture img{
+    width: 90%;
+        /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+    border-radius: 20px;
+      /* Cả 4 góc đều được uốn cong. */
+    border: 4px solid #c2e1fd;
+    /* 	Xác định tất cả các đường viền xung quanh. */
+    box-shadow: 0px 5px 15px 5px #265077 ;
+    /* Màu sắc cho bóng. */
+    transition: all .7;
+    /* x-y-độ mờ-đọ phóng rộng-màu */
+    /* filter: brightness(55%) blur(2px); */
+  }
+   
+  .picture-title{
+    position: absolute;
+      /* Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt. */
+    top: 50%;
+   /* Khoảng cách tính từ mép trên ngoài cùng của thành phần bao ngoài, đơn vị có thể là px, em, %, ... */
+    left: 50%;
+     /* Khoảng cách tính từ mép trái ngoài cùng của thành phần bao ngoài, đơn vị có thể là px, em, %, ... */
+    color: #c2e1fd;
+    transform: translate(-65%,100%);
+     /* Xác định một dịch chuyển 2D. */
+    opacity: 0;
+    /* Độ trong suốt của thành phần phụ thuộc vào giá trị. */
+    transition: all .7s;
+ /* Xác định hiệu ứng của quá trình chuyển đổi cho tất cả thuộc tính. */
+ /* Quá trình chuyển đổi mất bao nhiêu thời gian. */
+  }
+   
+  .about-picture:hover img,
+  .about-picture:active img{
+    filter: brightness(55%) blur(2px); 
+    /* brightness điều chỉnh độ sáng của hình ảnh */
+    /* blur tạo hiệu ứng mờ lên hình ảnh. Giá trị truyền vào càng lớn thì ảnh càng mờ */
+  }
+   
+  .about-picture:hover .picture-title,
+  .about-picture:active .picture-title{
+    transform: translate(-65%, -50%);
+     /* Xác định một dịch chuyển 2D. */
+    opacity: 1;
+    /* /* Độ trong suốt của thành phần phụ thuộc vào giá trị. */ 
+  }
+  .products-section{
+    background-color: #f4f4f4;
+}
+ 
+.products-section h2{
+    margin-bottom: 60px;
+     /* Canh lề bên dưới cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+ 
+.product-box{
+    background-color: #fff7ee;
+    box-shadow: 3px 5px 10px #a01414;
+     /* Màu sắc cho bóng. */
+    width: 90%;
+        /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+    height: 350px;
+      /* Định rõ đơn vị cho chiều cao. */
+}
+ 
+.product-price{
+    color: #265077;
+    font-size: 250%;
+         /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+    font-weight: 300;
+      /* xác định độ đậm của chữ cái xuất hiện trong phần tử. */
+    text-align: center;
+     /*  /* Sắp nội dung theo chiều ngang nằm giữa.  */
+}
+ 
+.product-price span {
+    font-size: 80%;
+       /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+}
+ 
+.product-box ul li{
+    margin-left: 20%;
+     /* Canh lề bên trái cho thành phần, đơn vị có thể là px, em, %, ... */
+    list-style: none;
+     /* Không hiển thị image list, đây là dạng mặc định. */
+    margin-top: 20px;
+      /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+    margin-bottom: 20px;
+      /* Canh lề bên dưới cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+ 
+.product-box .btn{
+    margin-left: 20%;
+     /* Canh lề bên trái cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+.small-icon{
+    color: #305679;
+    font-size: 130%;
+     /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+    margin-right: 10px;
+     /* Canh lề bên phải cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+/* ------------------------------- */
+/* ---------TESTIMONIALS SECTION ---------- */
+/* ------------------------------------------ */
+.testimonials-section{
+    background-image:linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)), url('../img/background2.jpeg');
+    background-position: center;
+        /* căn giữa màn hình */
+    background-size: cover;
+     /* full kích cở màn hình */
+    background-attachment: fixed;
+        /* giữ nguyên tấm ảnh không bị trôi theo */
+}
+ 
+.testimonials-section h2{
+    margin-bottom: 70px;
+     /* Canh lề bên dưới cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+ 
+blockquote{
+    width: 95%;
+       /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+    position: relative;
+         /* Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt. */
+
+    font-style: italic;
+      /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+    line-height: 140%;
+      /* Tăng hoặc giảm khoảng cách giữa các dòng, đơn vị có thể là px, em, %, ... */
+    color: white;
+}
+ 
+blockquote:before{
+    content: '\201C';
+    /* Nội dung trong dấu ngoặc sẽ được thêm vào thành phần. */
+    display: block;
+    /* 	Thành phần hiển thị như một khối, khi sử dụng giá trị block thành phần sẽ đứng một hàng độc lập so với thành phần trước và sau nó */
+    font-size: 400%;
+     /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+    position: absolute;
+     /* Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt. */
+    top: -10px;
+    /* Khoảng cách tính từ mép trên ngoài cùng của thành phần bao ngoài, đơn vị có thể là px, em, %, ... */
+    left: -10px;
+     /* Khoảng cách tính từ mép trái ngoài cùng của thành phần bao ngoài, đơn vị có thể là px, em, %, ... */
+}
+ 
+cite{
+    display: block;
+    /* 	Thành phần hiển thị như một khối, khi sử dụng giá trị block thành phần sẽ đứng một hàng độc lập so với thành phần trước và sau nó */
+    color: #6b95bd;
+    margin-top: 25px;
+      /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+ 
+cite img{
+    height: 50px;
+    /* Định rõ đơn vị cho chiều cao. */
+    border-radius: 50%;
+     /* Cả 4 góc đều được uốn cong. */
+    border: 2px solid #265077;
+    /* Xác định tất cả các đường viền xung quanh. */
+    vertical-align: middle;
+    /* Thành phần sẽ được canh giữa theo thành phần bao ngoài. */
+    margin-right: 5px;
+     /* Canh lề bên phải cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+/* ----------------------------------- */
+/* --------SPONSOR SECTION-------- */
+/* ------------------------------------ */
+.sponsors-section{
+    background-color: #f4f4f4;
+}
+
+.sponsors-section h2{
+      margin-bottom: 50px;
+       /* Canh lề bên dưới cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+
+.sponsors-showcase{
+   margin-left: 8%;
+    /* Canh lề bên trái cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+
+.sponsors-showcase li{
+   list-style: none;
+     /* Không hiển thị image list, đây là dạng mặc định. */
+   float: left;
+   /*  nằm bên trái */
+   width: 30%;
+       /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+   text-align: center;
+     /*  /* Sắp nội dung theo chiều ngang nằm giữa.  */
+   margin-bottom: 20px;
+     /* Canh lề bên dưới cho thành phần, đơn vị có thể là px, em, %, ... */
+}
+
+.logo-sponsor{
+   width: 140px;
+     /*    /* Định rõ đơn vị cho chiều rộng, đơn vị có thể là px, em, %, ... */ 
+   cursor: pointer;
+   /* Con trỏ chuột dạng pointer. */
+   transition: all .3s;
+   /* Xác định hiệu ứng của quá trình chuyển đổi cho tất cả thuộc tính. */
+    /* Quá trình chuyển đổi mất bao nhiêu thời gian. */
+
+}
+
+.sponsors-showcase li .logo-sponsor:hover,
+.sponsors-showcase li .logo-sponsor:active{
+   transform: scale(1.2);
+   /* Xác định một biến đổi tỷ lệ, 2D. */
+}
+
+figcaption{
+   color: #265077;
+   font-weight: 900;
+   /*    /* xác định độ đậm của chữ cái xuất hiện trong phần tử. */ 
+   font-size: 120%;
+    /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+   cursor: pointer;
+     /* Con trỏ chuột dạng pointer. */
+}
+/* ------------------------------------- */
+/* ---------FOOTER------------------- */
+/* ---------------------------------- */
+footer{
+    text-align: center;
+     /*  /* Sắp nội dung theo chiều ngang nằm giữa.  */
+    background-color: #494949;
+    color: white;
+    padding: 20px;
+      /* Đây là cách viết ngắn gọn các thuộc tính bên dưới, đơn vị có thể là px, em, %, ... */
+}
+.information{
+    list-style: none;
+     /* Không hiển thị image list, đây là dạng mặc định. */
+    color: white;
+    line-height: 200%;
+     /* Tăng hoặc giảm khoảng cách giữa các dòng, đơn vị có thể là px, em, %, ... */
+    margin-top: 70px;
+         /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+
+    word-spacing: 1px;
+    /* Tăng hoặc giảm khoảng cách giữa các từ trong đoạn văn bản, có thể sử dụng giá trị âm */
+    font-size: 95%;
+     /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+}
+ 
+.information .small-icon{
+    color: #2481d8
+}
+ 
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+       /* Xác định một biến đổi tỷ lệ, 2D. */
+
+}
+ 
+.social-icons{
+    margin-top: 50px;
+       /* Canh lề bên trên cho thành phần, đơn vị có thể là px, em, %, ... */
+    list-style: none;
+     /* Không hiển thị image list, đây là dạng mặc định. */
+}
+ 
+.social-icons li{
+    display: inline-block;
+    /* Thành phần sẽ hiển thị như một khối, nhưng là một khối nội tuyến. */
+    font-size: 250%;
+     /* Xác định kích cỡ của chữ, đơn vị có thể là px, em, %, ... */
+    margin-left: 20px;
+      /* Canh lề bên trái cho thành phần, đơn vị có thể là px, em, %, ... */
+    color: white;
+}
+ 
+.social-icons li i{
+    transition: all .3s;
+     /* Xác định hiệu ứng của quá trình chuyển đổi cho tất cả thuộc tính. */
+    /* Quá trình chuyển đổi mất bao nhiêu thời gian. */
+    cursor: pointer;
+      /* Con trỏ chuột dạng pointer. */
+}
+ 
+.social-icons li i:hover,
+.social-icons li i:active{
+    transform: scale(1.3);
+    /* Xác định một biến đổi tỷ lệ, 2D. */
+    color: #e67e22;
+}
+
+/* ---------------------------------- */
+/* ----------CONTACT FORM------------- */
+/* ------------------------------------------- */
+.contact-section{
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../img/background5.jpeg');
+    background-position: center;
+    /* căn giữa màn hình */
+    background-size: cover;
+    /* full kích cở màn hình */
+    background-attachment: fixed;
+     /* giữ nguyên tấm ảnh không bị trôi theo */
+}
